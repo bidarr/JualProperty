@@ -1,0 +1,87 @@
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Poppins',sans-serif; background:#f8f8f8; color:#333; line-height:1.6; }
+
+/* Hero */
+.hero { position:relative; height:70vh; display:flex; justify-content:center; align-items:center; background:url('images/bg.jpg') center/cover no-repeat; }
+.hero .overlay { position:absolute; inset:0; background:rgba(0,0,0,0.55); }
+.hero-content { position:relative; text-align:center; color:#fff; }
+.hero h1 { font-size:3.5rem; margin-bottom:10px; font-weight:700; }
+.hero p { font-size:1.4rem; margin-bottom:25px; }
+.btn { padding:12px 28px; background:#f4d03f; color:#333; text-decoration:none; border-radius:8px; font-weight:600; cursor:pointer; }
+.btn:hover { background:#d4ac0d; color:#fff; }
+
+/* Tentang Saya */
+.about { padding:40px 10%; background:linear-gradient(135deg,#fff,#f0f0f0); }
+.about-container { display:flex; align-items:center; gap:30px; flex-wrap:wrap; }
+.profile-img { width:180px; border-radius:12px; object-fit:cover; }
+.about-text { flex:1; }
+.about-text h2 { font-size:2rem; margin-bottom:12px; }
+.about-text p { margin-bottom:15px; font-size:1rem; }
+.contact-info { list-style:none; }
+.contact-info li { margin-bottom:8px; }
+.contact-info a { color:#007BFF; text-decoration:none; }
+.contact-info a:hover { text-decoration:underline; }
+
+/* Properti */
+.property { padding:50px 10%; }
+.property h2 { text-align:center; margin-bottom:px; font-size:2rem; color: orange;}
+.property h4 { text-align:center; margin-bottom:35px; font-size:rem; }
+.property-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px; }
+.card { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:transform 0.3s; }
+.card:hover { transform:translateY(-8px); }
+.card img { width:100%; height:180px; object-fit:cover; }
+.card-content { padding:18px; }
+.card-content h3 { margin-bottom:10px; font-size:1.2rem; }
+.card-content p { margin-bottom:12px; font-weight:500; }
+.card-content button { padding:8px 16px; border:none; background:#f4d03f; font-weight:600; border-radius:5px; cursor:pointer; transition:0.3s; }
+.card-content button:hover { background:#d4ac0d; color:#fff; }
+
+/* Modal */
+.modal { display:none; position:fixed; z-index:1000; inset:0; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; overflow:auto; padding:20px; }
+.modal.active { display:flex; }
+.modal-content {
+  background:#fff;
+  border-radius:15px;
+  max-width:95%;
+  width:90%;
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
+  padding:30px;
+  position:relative;
+  transform: scale(0.8) translateY(-50px);
+  opacity:0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.modal.active .modal-content { transform: scale(1) translateY(0); opacity:1; }
+.modal-content img { width:450px; max-width:100%; border-radius:12px; object-fit:cover; }
+.modal-text { flex:1; min-width:300px; }
+.modal-text h3 { font-size:2rem; margin-bottom:15px; }
+.modal-text p { font-size:1.1rem; margin-bottom:15px; line-height:1.6; }
+.close { position:absolute; right:20px; top:15px; font-size:32px; font-weight:bold; cursor:pointer; }
+
+/* Carousel */
+.carousel { position:relative; width:450px; max-width:100%; }
+.carousel img { width:100%; display:none; border-radius:12px; object-fit:cover; }
+.carousel img.active { display:block; }
+.prev, .next { position:absolute; top:50%; transform:translateY(-50%); font-size:28px; color:#fff; background:rgba(0,0,0,0.5); padding:10px 14px; border-radius:50%; cursor:pointer; user-select:none; }
+.prev { left:10px; }
+.next { right:10px; }
+
+/* Tombol WA */
+.wa-btn { display:inline-block; padding:12px 22px; background:#25D366; color:#fff; border-radius:8px; text-decoration:none; font-weight:600; }
+.wa-btn:hover { background:#128C7E; }
+
+/* Footer */
+footer { text-align:center; padding:20px; background:#222; color:#ddd; font-size:0.9rem; }
+
+/* Responsif HP */
+@media(max-width:768px){
+  .about-container { flex-direction:column; align-items:center; text-align:center; }
+  .about-text { flex:unset; }
+  .carousel { width:100%; }
+  .modal-content { flex-direction:column; padding:20px; }
+  .modal-content img { width:100%; }
+  .modal-text { min-width:unset; text-align:center; }
+}

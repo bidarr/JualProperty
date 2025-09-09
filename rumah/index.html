@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Mutiara Regency</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Grand Mutiara Regency</h1>
+      <p>Hunian Mewah, Nyaman, dan Strategis</p>
+      <a href="#property" class="btn">Lihat Property</a>
+    </div>
+  </header>
+
+  <!-- Tentang Saya -->
+  <section class="about">
+    <div class="about-container">
+      <img src="images/adii.png" alt="Foto Adi" class="profile-img">
+      <div class="about-text">
+        <h2>Tentang Saya</h2>
+        <p>
+          Halo, saya <b>Adi</b>, seorang consultant properti profesional yang siap membantu Anda
+          menemukan rumah impian di <b>Grand Mutiara Regency</b>.  
+          Dengan pengalaman dan dedikasi tinggi, saya pastikan proses pembelian rumah
+          Anda aman, nyaman, dan terpercaya.
+        </p>
+        <ul class="contact-info">
+          <li><strong>Nama     :</strong> Adi Saputra</li>
+          <li><strong>No. HP/WA:</strong> <a href="https://wa.me/6287781844069" target="_blank">+62 877-8184-4069</a></li>
+          <li><strong>Email    :</strong> <a href="mailto:adi@email.com">adxsptr47@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Properti -->
+  <section class="property" id="property">
+    <h2>Daftar Property</h2>
+    <H4>Lokasi : JL. Taqwa, Mata Merah, Palembang</H4>
+    <div class="property-grid">
+      <!-- Rumah -->
+      <div class="card">
+        <img src="images/t45.jpg" alt="Rumah Type 45">
+        <div class="card-content">
+          <h3>Rumah Type 45</h3>
+          <p>Harga: Rp 479.500.000</p>
+          <button onclick="openModal('rumah1')">Lihat Spesifikasi</button>
+        </div>
+      </div>
+      <!-- Ruko -->
+      <div class="card">
+        <img src="images/t55.jpg" alt="Ruko 2 Lantai">
+        <div class="card-content">
+          <h3>Rumah Type 55</h3>
+          <p>Harga: Rp 579.500.000</p>
+          <button onclick="openModal('rumah2')">Lihat Spesifikasi</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/ruko.jpg" alt="Ruko 2 Lantai">
+        <div class="card-content">
+          <h3>Ruko 2 Lantai</h3>
+          <p>Harga: Rp 900.000.000</p>
+          <button onclick="openModal('ruko1')">Lihat Spesifikasi</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Rumah Type 45 -->
+  <div id="rumah1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('rumah1')">&times;</span>
+      <div class="carousel">
+        <img src="images/t45.jpg" class="active">
+        <img src="images/R2.jpg">
+        <img src="images/t4.jpg">
+        <span class="prev" onclick="prevSlide('rumah1')">&#10094;</span>
+        <span class="next" onclick="nextSlide('rumah1')">&#10095;</span>
+      </div>
+      <div class="modal-text">
+        <h3>Rumah Type 45</h3>
+        <h2> Ukuran 45/90</h2>
+        <p>- 2 Kamar Tidur<br>- 1 Kamar Mandi<br>- Ruang Tamu<br>- Dapur<br>- Listrik 2200 Watt</p>
+        <p>Informasi Lebih Lanjut Hubungi Whattshap dibawah ini:</p> 
+        <a href="https://wa.me/6287781844069" class="wa-btn" target="_blank">Chat via WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Ruko 2 Lantai -->
+  <div id="rumah2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('rumah2')">&times;</span>
+      <div class="carousel">
+        <img src="images/t55.jpg" class="active">
+        <img src="images/t5t.jpg">
+        <img src="images/t5.jpg">
+        <span class="prev" onclick="prevSlide('rumah2')">&#10094;</span>
+        <span class="next" onclick="nextSlide('rumah2')">&#10095;</span>
+      </div>
+      <div class="modal-text">
+        <h3>Rumah Type 55</h3>
+        <h2> Ukuran 55/90</h2>
+      <p>- 2 Kamar Tidur<br>- 1 Kamar Mandi<br>- Ruang Tamu<br>- Dapur<br>- Listrik 2200 Watt<br>- Free Kanopi & CCTV</p>   
+      <p>Informasi Lebih Lanjut Hubungi Whattshap dibawah ini:</p> 
+        <a href="https://wa.me/6287781844069" class="wa-btn" target="_blank">Chat via WhatsApp</a>
+      </div>
+    </div>
+  </div>
+   <!-- Modal Ruko 2 Lantai -->
+  <div id="ruko1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('ruko1')">&times;</span>
+      <div class="carousel">
+        <img src="images/r1.jpg" class="active">
+        <img src="images/ruko.jpg">
+        <img src="images/r1.jpg">
+        <span class="prev" onclick="prevSlide('ruko1')">&#10094;</span>
+        <span class="next" onclick="nextSlide('ruko1')">&#10095;</span>
+      </div>
+      <div class="modal-text">
+        <h3>Ruko 2 Lantai</h3>
+        <h2> Ukuran 4/16</h2>
+      <p>- 2 Kamar Mandi<br>- Listrik 2200 Watt<br>- Parkiran Luas 13M</p>
+      <p>Informasi Lebih Lanjut Hubungi Whattshap dibawah ini:</p>   
+        <a href="https://wa.me/6287781844069" class="wa-btn" target="_blank">Chat via WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>LOKASI : JL. TAQWA, MATA MERAH, PALEMBANG </p>
+  </footer>
+
+  <script>
+    function openModal(id){
+      document.getElementById(id).classList.add('active');
+    }
+    function closeModal(id){
+      document.getElementById(id).classList.remove('active');
+    }
+
+    // Carousel
+    function nextSlide(modalId){
+      let modal = document.getElementById(modalId);
+      let slides = modal.querySelectorAll('.carousel img');
+      let current = modal.querySelector('.carousel img.active');
+      let index = Array.from(slides).indexOf(current);
+      current.classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }
+    function prevSlide(modalId){
+      let modal = document.getElementById(modalId);
+      let slides = modal.querySelectorAll('.carousel img');
+      let current = modal.querySelector('.carousel img.active');
+      let index = Array.from(slides).indexOf(current);
+      current.classList.remove('active');
+      index = (index - 1 + slides.length) % slides.length;
+      slides[index].classList.add('active');
+    }
+
+    // Klik di luar modal untuk menutup
+    window.onclick = function(event){
+      if(event.target.classList.contains('modal')){
+        event.target.classList.remove('active');
+      }
+    }
+  </script>
+
+</body>
+</html>
